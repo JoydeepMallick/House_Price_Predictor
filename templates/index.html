@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="shortcut icon" href="{{url_for('static', filename='css/fevicon.png')}}">
+
+    <title>Housing Price Predictor</title>
+</head>
+<body>
+
+    <div class="bg-image"></div>
+
+    <div class="bg-text">
+
+    <form action="{{url_for('predict')}}" method="post">
+
+        <div id="area" class="do">
+            <h3>Housing area :</h3>
+            <input type="text" name="area" placeholder="Enter Housing area"></input>
+        </div>
+        
+        <div id="bedroom" class="do">
+            <h3>No. of bedrooms :</h3>
+            <input type="text" name="bedroom" placeholder="Enter no. of bedrooms"></input>
+        </div>
+        
+        <div id="bathroom" class="do">
+            <h3>No. of bathrooms :</h3>
+            <input type="text" name="bathroom" placeholder="Enter no. of bathrooms"></input>
+        </div>
+        
+        <div id="stories" class="do">
+            <h3>No. of stories :</h3>
+            <input type="text" name="stories" placeholder="Enter no. of stories"></input>
+        </div>
+        
+        <br>
+        <!-- <h3>House near mainroad :</h3> -->
+        <label for="mainroad">House near mainroad ?</label>
+        <select id="mainroad" name="mainroad">
+            <option value="1" >Yes</option>
+            <option value="0" >No</option>
+        </select>
+<!-- string to int conversion must be considered -->
+
+        <label for="guestroom">Want guestroom ?</label>
+        <select id="guestroom" name="guestroom">
+            <option value="1" >Yes</option>
+            <option value="0" >No</option>
+        </select>        
+
+        <!-- <h3>Need basement</h3> -->
+        <label for="basement">Want basement ?</label>
+        <select id="basement" name="basement">
+            <option value="1" >Yes</option>
+            <option value="0" >No</option>
+        </select>
+
+        <!-- <h3>Need hotwaterheating</h3> -->
+        <label for="hotwaterheating">Want hotwaterheating ?</label>
+        <select id="hotwaterheating" name="hotwaterheating">
+            <option value="1" >Yes</option>
+            <option value="0" >No</option>
+        </select>
+
+        <!-- <h3>Need airconditioning</h3> -->
+        <label for="airconditioning">Want airconditioning ?</label>
+        <select id="airconditioning" name="airconditioning">
+            <option value="1" >Yes</option>
+            <option value="0" >No</option>
+        </select>
+
+        <br>
+
+        <div id="parking" class="do">
+            <h3>Parking</h3>
+            <input type="text" name="parking" placeholder="No. of vehicles to be parked"></input>
+        </div>
+       
+
+        <!-- <h3>Prefarea</h3> -->
+        <label for="prefarea">Want preferred area ?</label>
+        <select id="prefarea" name="prefarea">
+            <option value="1" >Yes</option>
+            <option value="0" >No</option>
+        </select>
+
+        <br>
+
+        <!-- <h3>Furnishing status</h3> -->
+        <label for="furnishingstatus">Furnishing status ?   </label>
+        <!-- <select id="furnishingstatus" name="furnishingstatus">
+            <option value="2" >furnished</option>
+            <option value="1" >semi-furnished</option>
+            <option value="0" >unfurnished</option>
+        </select> -->
+    
+        <label id="radio">
+            <input type="radio" value="2"  name="furnishingstatus" checked/>Furnished</input>
+            <span></span>
+        </label>
+        <label id="radio" >
+            <input type="radio" value="1" name="furnishingstatus" />Semi-furnished</input>
+            <span></span>
+        </label>
+        <label id="radio">
+            <input type="radio" value="0"  name="furnishingstatus" />Unfurnished</input>
+            <span></span>
+        </label>
+
+        <br><br>
+        <!-- <button type="submit"><h2><b>Predict Price💲</b></h2></button> -->
+        <button class="button" style="vertical-align:middle"><span>Predict Price </span></button>
+    </form>
+
+    <br>
+    <div id="output">
+        {{prediction_text}}
+    </div>
+    
+
+    <br>
+    <h5>
+        The prediction is on the basis of 
+        <a href="https://drive.google.com/file/d/1mGd1jwG1jExXmJpmGgDhUY9awevlopdD/view?usp=sharing" target="_blank">Housing.csv</a>
+        dataset applying concept of Linear Regression.
+    </h5>
+    <h5>
+        Drive link
+        <a href="https://drive.google.com/file/d/1Me_QouK9RtWRUsBeoFRpFAUsW1XU1O3x/view?usp=sharing">Housing_using_flask</a>
+    </h5>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; 
+  width: 100%; 
+  position: relative;
+  overflow: auto;
+  
+  
+
+
+}
+
+
+.bg-image {
+    /* The image used */
+    
+    background :url("./istockphoto-background.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center; 
+    box-sizing: border-box; 
+    padding: 0px;
+    border: 0px;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    
+    
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+     
+    
+}
+
+.bg-text {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.1); /* Black w/opacity/see-through */  
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;  
+
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 90%;
+    
+    /* padding: 30px; */
+    text-align: center;
+
+  }
+
+
+
+#output{
+    color: rgb(46, 4, 143);
+    font-size: 50px;
+}
+
+.do{
+    display: inline-block;
+    padding: 10px;
+}
+
+select{
+    width: 5%;
+    /* padding:3px; */
+    border-radius:10px;
+}
+
+
+input{
+    padding:10px;
+    margin:10px 0; /* add top and bottom margin*/
+    border:10px;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius:10px;
+
+}
+
+h3{
+    color:rgb(109, 103, 103);
+    padding: 3px;
+    margin:0;
+}
+
+label{
+    color: rgb(11, 85, 81);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
+}
+
+#radio{
+    color: rgb(0, 0, 0);
+}
+
+
+
+
+
+.button {
+    display: inline-block;
+    border-radius: 30px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 250px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    /* box-shadow: 0 9px #999; */
+    
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    /* content: '\00bb'; */
+    content: "\0024";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+
+
+  a:link {
+    color: rgb(10, 238, 67);
+  }
+  a:visited {
+    color: rgba(68, 8, 18, 0.295);
+  }
+  
+  a:hover {
+    color: rgb(34, 20, 231);
+  }
+
+  h5{
+    color: rgb(253, 255, 249);
+  }
