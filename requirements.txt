@@ -33,7 +33,6 @@ pure-eval==0.2.1
 Pygments==2.11.2
 python-dateutil==2.8.2
 pytz==2021.3
-pypiwin32==223
 pyzmq==22.3.0
 scikit-learn==1.0.2
 scipy==1.7.3
