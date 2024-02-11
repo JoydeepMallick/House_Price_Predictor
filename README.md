@@ -10,5 +10,5 @@ Active links to website :-
 
 https://joydeepmallick.pythonanywhere.com/  (will be dead on 11th May 2024 - 🙂Please notify me if this does not work I need to refresh it every 3 months)
 
-
+https://house-price-predictor-di5m.onrender.com/ (slow loading time on first time load🙂)
   
